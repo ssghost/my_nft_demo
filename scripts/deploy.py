@@ -100,5 +100,7 @@ def link_payment(
 
 def main():
     deploy_snft()
+    deploy_mocks()
     deploy_and_create()
+    create_metadata()
 
