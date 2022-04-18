@@ -4,7 +4,7 @@ import pytest
 
 def test_deploy_and_create():
     if network.show_active() not in ["hardhat", "development", "ganache", "mainnet-fork"]:
-        pytest.skip()
+        pytest.skip("Only for local testing")
     smart_nft = deploy_and_create()
     assert smart_nft.ownerOf(0) == get_account()
 
